@@ -1,7 +1,6 @@
 package TP3.exercice2;
 
 import java.util.Arrays;
-import java.util.Objects;
 
 public class Computer {
     private double price;
@@ -18,21 +17,24 @@ public class Computer {
         this.description = description;
         this.monitors = monitors;
         this.keyboard = keyboard;
+
     }
+
     // Constructeur "plusieurs écrans et une souris"
     public Computer(double price, String description, Monitor[] monitors, Keyboard keyboard, Mouse mouse) {
         this(price, description, monitors, keyboard);
         this.mouse = mouse;
     }
+
     // Constructeur "un écran, sans souris"
     public Computer(double price, String description, Monitor monitor, Keyboard keyboard) {
         this(price, description, new Monitor[]{monitor}, keyboard);
     }
+
     // Constructeur "un écran et une souris"
     public Computer(double price, String description, Monitor monitor, Keyboard keyboard, Mouse mouse) {
         this(price, description, new Monitor[]{monitor}, keyboard, mouse);
     }
-
 
     public double getPrice() {
         return price;

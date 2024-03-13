@@ -1,7 +1,5 @@
 package TP3.exercice2;
 
-import java.util.Objects;
-
 public class Mouse {
     private int dpi;
     private String brand;

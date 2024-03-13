@@ -26,7 +26,7 @@ classDiagram
         + School(name: String, director: Director)
     }
     
-    School --> "1" Director
+    School "1" --> "1" Director
 
     class Formation {
         - name: String
@@ -43,8 +43,8 @@ classDiagram
         + setInscriptionDate(inscriptionDate: LocalDate) void
     }
     
-    Formation --> "1" School 
-    Formation --> "1" Student
+    Formation "0..*" --> "1" School 
+    Formation "0..*" --> "1" Student
 ```
 
 **NB :** La classe `Formation` est une **Classe-Association** (voir cours).
