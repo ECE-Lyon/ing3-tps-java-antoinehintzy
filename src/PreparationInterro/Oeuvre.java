@@ -1,16 +1,14 @@
 package PreparationInterro;
 
 public class Oeuvre {
-    protected String nom;
+    protected String nom; // Les attributs d'une classe mère ne sont pas automatiquement protected.
+    // Il peut être intéressant de les laisser privés jusqu'à ce qu'on en ait besoin dans les classes filles.
     protected String description;
     protected Artiste artiste;
 
-    public Oeuvre(String nom, String description) {
+    public Oeuvre(String nom, String description, Artiste artiste) {
         this.nom = nom;
         this.description = description;
-    }
-    public Oeuvre(String nom, String description, Artiste artiste) {
-        this(nom, description);
         this.artiste = artiste;
     }
 

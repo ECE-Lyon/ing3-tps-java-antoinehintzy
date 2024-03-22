@@ -8,9 +8,6 @@ public class SalleExpo {
     private float superficie;
     private List<Oeuvre> oeuvres;
 
-    public SalleExpo(int numero) {
-        this(numero, 0.0f);
-    }
     public SalleExpo(int numero, float superficie) {
         this.numero = numero;
         this.superficie = superficie;
@@ -33,7 +30,7 @@ public class SalleExpo {
         this.superficie = superficie;
     }
 
-    public void ajouterOeuvre(Oeuvre oeuvre) {
+    public void addOeuvre(Oeuvre oeuvre) {
         this.oeuvres.add(oeuvre);
     }
 

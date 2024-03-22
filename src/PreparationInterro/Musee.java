@@ -7,12 +7,9 @@ public class Musee {
     private String nom;
     private List<SalleExpo> salles;
 
-    public Musee(String nom, int nbSalles) {
+    public Musee(String nom) {
         this.nom = nom;
         this.salles = new ArrayList<SalleExpo>();
-        for (int i = 0; i < nbSalles; i++) {
-            this.salles.add(new SalleExpo(i + 1)); // on pourrait demander la superficie au clavier.
-        }
     }
 
     public String getNom() {
@@ -22,8 +19,8 @@ public class Musee {
     public void setNom(String nom) {
         this.nom = nom;
     }
-    public void ajouterSalle(SalleExpo salle) {
-        this.salles.add(salle);
+    public void addSalle(int numero, float superficie) {
+        this.salles.add(new SalleExpo(numero, superficie));
     }
 
     @Override

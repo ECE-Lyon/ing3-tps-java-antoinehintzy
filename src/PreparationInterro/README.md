@@ -19,30 +19,28 @@ title: Diagramme de classes
 classDiagram
     class Musée {
         - nom: String
-        + Musee(nom: String, nbSalles: int)
+        + Musee(nom: String)
         + getNom() String
         + setNom(nom: String) void
-        + ajouterSalle(salle: SalleExpo): void
+        + addSalle(numero: int, superficie: float): void
         + toString(): String
     }
 
     class SalleExpo {
         - numero: int
         - superficie: float
-        + SalleExpo(numero: int)
         + SalleExpo(numero: int, superficie: float)
         + getNumero() int
         + setNumero(numero: int) void
         + getSuperficie() float
         + setSuperficie(superficie: float) void
-        + ajouterOeuvre(oeuvre: Oeuvre) void
+        + addOeuvre(oeuvre: Oeuvre) void
         + toString(): String
     }
 
     class Oeuvre {
-        - nom: String
-        - description: String
-        + Oeuvre(nom: String, description: String)
+        # nom: String
+        # description: String
         + Oeuvre(nom: String, description: String, artiste: Artiste)
         + getNom() String
         + setNom(nom: String) void
@@ -92,7 +90,7 @@ classDiagram
         + toString(): String
     }
     
-    Musée *--> "1..n" SalleExpo
+    Musée *--> "0..n" SalleExpo
     SalleExpo o--> "0..n" Oeuvre
     Oeuvre "1..n" --> "1" Artiste
     Oeuvre <|-- Tableau
