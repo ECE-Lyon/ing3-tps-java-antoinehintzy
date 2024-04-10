@@ -5,8 +5,8 @@ public class Tableau extends Oeuvre {
     private float largeur;
     boolean paysage;
 
-    public Tableau(String nom, String description, float hauteur, float largeur, boolean paysage) {
-        super(nom, description);
+    public Tableau(String nom, String description, Artiste artiste, float hauteur, float largeur, boolean paysage) {
+        super(nom, description, artiste);
         this.hauteur = hauteur;
         this.largeur = largeur;
         this.paysage = paysage;

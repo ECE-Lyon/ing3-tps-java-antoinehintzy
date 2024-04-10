@@ -6,8 +6,8 @@ public class Statue extends Oeuvre {
     private float profondeur;
     private String matiere;
 
-    public Statue(String nom, String description, float hauteur, float largeur, float profondeur, String matiere) {
-        super(nom, description);
+    public Statue(String nom, String description, Artiste artiste, float hauteur, float largeur, float profondeur, String matiere) {
+        super(nom, description, artiste);
         this.hauteur = hauteur;
         this.largeur = largeur;
         this.profondeur = profondeur;

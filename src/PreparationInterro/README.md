@@ -64,7 +64,7 @@ classDiagram
         hauteur: float
         largeur: float
         paysage: boolean
-        + Tableau(nom: String, description: String, hauteur: float, largeur: float, paysage: boolean)
+        + Tableau(nom: String, description: String, artiste: Artiste, hauteur: float, largeur: float, paysage: boolean)
         + getHauteur() float
         + setHauteur(hauteur: float) void
         + getLargeur() float
@@ -78,7 +78,7 @@ classDiagram
         largeur: float
         profondeur: float
         matiere: String
-        + Statue(nom: String, description: String, hauteur: float, largeur: float, profondeur: float, matiere: String)
+        + Statue(nom: String, description: String, artiste: Artiste, hauteur: float, largeur: float, profondeur: float, matiere: String)
         + getHauteur() float
         + setHauteur(hauteur: float) void
         + getLargeur() float
