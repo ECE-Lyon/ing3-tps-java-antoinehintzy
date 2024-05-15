@@ -36,8 +36,8 @@ classDiagram
     }
     class Balise {
         <<Abstract>>
-        - tag: String
-        - classes: String[]
+        # tag: String
+        # classes: String[]
         + Balise(tag: String)
         + toString() String*
         + getClasses() String[]
